@@ -2,6 +2,9 @@ from os_utils import check_ping, check_disk_space
 from log_parser import analizar_logs
 from network_models import Router, Server
 from threat_intel import mostrar_tabla_amenazas
+from inventory_manager import analizar_inventario
+from report_generator import generar_informe_excel
+
 def mostrar_menu() -> None:
     print("\n=== Kit de Herramientas para Administradores de Sistemas ===")
     print("1. Comprobar ping a una IP")
@@ -28,16 +31,5 @@ def main() -> None:
         elif opcion == "3":
             analizar_logs()
         elif opcion == "4":
-           mostrar_tabla_amenazas()
-        elif opcion == "5":
-            print("→ Módulo de inventario (Paso 6)")
-        elif opcion == "6":
-            print("→ Módulo de Excel (Paso 7)")
-        elif opcion == "7":
-            print("¡Hasta luego!")
-            break
-        else:
-            print("Opción no válida, elige entre 1 y 7")
-
-if __name__ == "__main__":
-    main()
+            mostrar_tabla_amenazas()
+        e
