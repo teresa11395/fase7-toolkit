@@ -1,0 +1,15 @@
+May 19 08:23:11 server sshd[1234]: Failed password for root from 192.168.1.100 port 22 ssh2
+May 19 08:23:15 server sshd[1234]: Failed password for root from 192.168.1.100 port 22 ssh2
+May 19 08:23:18 server sshd[1234]: Failed password for admin from 45.33.32.156 port 22 ssh2
+May 19 08:24:01 server sshd[1235]: Accepted password for teresa from 192.168.1.1 port 22 ssh2
+May 19 08:24:45 server sshd[1236]: Failed password for root from 45.33.32.156 port 22 ssh2
+May 19 08:25:10 server sshd[1237]: Failed password for ubuntu from 198.20.69.74 port 22 ssh2
+May 19 08:25:12 server sshd[1237]: Failed password for ubuntu from 198.20.69.74 port 22 ssh2
+May 19 08:25:14 server sshd[1237]: Failed password for ubuntu from 198.20.69.74 port 22 ssh2
+May 19 08:26:00 server sshd[1238]: Failed password for root from 80.82.77.33 port 22 ssh2
+May 19 08:26:03 server sshd[1238]: Failed password for root from 80.82.77.33 port 22 ssh2
+May 19 08:26:05 server sshd[1238]: Failed password for root from 80.82.77.33 port 22 ssh2
+May 19 08:26:07 server sshd[1238]: Failed password for root from 80.82.77.33 port 22 ssh2
+May 19 08:27:00 server sshd[1239]: Accepted password for teresa from 192.168.1.1 port 22 ssh2
+May 19 08:28:11 server sshd[1240]: Failed password for root from 192.168.1.100 port 22 ssh2
+May 19 08:29:00 server sshd[1241]: Failed password for admin from 45.33.32.156 port 22 ssh2
