@@ -80,5 +80,30 @@ def get_suspicious_ips():
         return JSONResponse(
             status_code=500,
             content={"error": str(e)}
-        )
+        )# ─────────────────────────────────────────
+# ENDPOINT 4: Guardar entrada en archivo
+# ─────────────────────────────────────────
+@app.post("/entries", tags=["Persistencia"])
+def add_entry(mensaje: str):
+    """
+    Guarda un mensaje en un archivo dentro del contenedor.
+    """
+    import datetime
+    entry = f"{datetime.datetime.now()} - {mensaje}\n"
+    with open("/data/entries.txt", "a") as f:
+        f.write(entry)
+    return {"guardado": mensaje}
+
+
+@app.get("/entries", tags=["Persistencia"])
+def get_entries():
+    """
+    Lee las entradas guardadas en el archivo.
+    """
+    try:
+        with open("/data/entries.txt", "r") as f:
+            contenido = f.readlines()
+        return {"entradas": contenido}
+    except FileNotFoundError:
+        return {"entradas": []}
  
