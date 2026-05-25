@@ -1,0 +1,27 @@
+# Entorno virtual de Python - ya instalamos las librerías con pip
+venv/
+.venv/
+
+# Caché de Python - archivos compilados innecesarios
+__pycache__/
+*.pyc
+*.pyo
+
+# Archivos de VS Code - configuración del editor, no del proyecto
+.vscode/
+
+# Git - el historial de commits no es necesario dentro del contenedor
+.git/
+.gitignore
+
+# Documentación - no necesaria para ejecutar la API
+docs/
+
+# Archivos de testing - no necesarios en producción
+test_toolkit.py
+
+# Variables de entorno sensibles - nunca dentro del contenedor
+.env
+
+# Archivos Excel generados - datos temporales
+*.xlsx
