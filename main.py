@@ -76,14 +76,14 @@ def get_suspicious_ips():
     Devuelve las IPs sospechosas detectadas en auth.log.
     """
     try:
-        from log_parser import parse_failed_attempts
+        from log_parser import analizar_logs
         log_path = os.path.join(os.path.dirname(__file__), "auth.log")
         if not os.path.exists(log_path):
             return JSONResponse(
                 status_code=404,
                 content={"error": "Archivo auth.log no encontrado"}
             )
-        ips = parse_failed_attempts(log_path)
+        ips = analizar_logs(log_path)
         return {
             "total_ips_sospechosas": len(ips),
             "ips": ips
@@ -136,9 +136,9 @@ def get_cached_logs():
         cached = r.get("suspicious_ips")
         if cached:
             return {"source": "cache", "data": cached}
-        from log_parser import parse_failed_attempts
+        from log_parser import analizar_logs
         log_path = os.path.join(os.path.dirname(__file__), "auth.log")
-        ips = parse_failed_attempts(log_path)
+        ips = analizar_logs(log_path)
         r.setex("suspicious_ips", 300, str(ips))
         return {"source": "fresh", "data": str(ips)}
     except Exception as e:
